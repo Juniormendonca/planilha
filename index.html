@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat de Gráficos, GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Chat de Gráficos da Planilha</h1>
+      <p>Funciona só no navegador, sem servidor. Envie seu .xlsx e faça perguntas.</p>
+    </header>
+
+    <section class="panel">
+      <label>Arquivo .xlsx</label>
+      <input type="file" id="file" accept=".xlsx" />
+    </section>
+
+    <section class="panel">
+      <label>Sua pergunta</label>
+      <input type="text" id="pergunta" placeholder="Ex.: Receita Líquida por mês, ou Orçado vs Realizado" />
+      <button id="btn">Gerar gráfico</button>
+      <p id="status"></p>
+    </section>
+
+    <section class="panel">
+      <canvas id="chart" height="120"></canvas>
+    </section>
+
+    <footer>
+      <small>Theme Linedata, azul #198cff. Tudo roda no cliente.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
